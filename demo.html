@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo VexyDigital</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+<header class="bg-white shadow p-4">
+<h1 id="n" class="text-2xl font-bold">Carregando</h1>
+</header>
+<section class="py-16 text-center">
+<h2 id="h" class="text-4xl font-bold mb-4"></h2>
+<p id="p" class="text-lg text-gray-600 mb-8"></p>
+<a href="https://wa.me/5511999999999" class="inline-block bg-green-500 text-white px-8 py-3 rounded-full font-bold">WhatsApp</a>
+</section>
+<footer class="text-center py-6 text-sm text-gray-500">Demo VexyDigital</footer>
+<script>
+const D = {
+"chaveiro-peixoto":{name:"Chaveiro Peixoto", sub:"Chaveiro em Cerqueira Cesar"},
+"studio-mani":{name:"Studio Mani", sub:"Salao de Beleza em Bom Retiro"},
+"amigo-pet":{name:"Amigo Pet", sub:"Banho e Tosa em Vila Mazzei"},
+"tattoo-art":{name:"Tattoo Art Studio", sub:"Tatuagem em Tucuruvi"},
+"mandi-pilates":{name:"MANDI Estudio de Pilates", sub:"Pilates em Vila Mariana"},
+"mecanica-pedrosa":{name:"Auto Mecanica Pedrosa", sub:"Oficina em Bela Vista"},
+"dentista-ponte-rasa":{name:"Dra Andressa e Dra Thais", sub:"Dentista em Ponte Rasa"},
+"eletricista-mineiro":{name:"Mineiro Eletricista", sub:"Eletricista em Sao Joao Climaco"}
+};
+const k = new URLSearchParams(location.search).get("b") || "chaveiro-peixoto";
+const b = D[k] || D["chaveiro-peixoto"];
+document.getElementById("n").textContent = b.name;
+document.getElementById("h").textContent = b.name;
+document.getElementById("p").textContent = b.sub;
+document.title = b.name;
+</script>
+</body>
+</html>
